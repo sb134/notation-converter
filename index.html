@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Notation converter</title>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
@@ -48,7 +48,6 @@
 		var app = angular.module('notationConverter', []);
 		app.controller('converter', function($scope) {
 			$scope.convert = function(num, notation, event) {
-				console.log(num);
 				try {
 					if (num === "") {
 						this.clear();
@@ -75,11 +74,11 @@
 		});
 	</script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body>
 	<div class="converter container" ng-controller="converter">
@@ -89,7 +88,6 @@
 			</div>
 			<div class="col-md-9 col-sm-9">
 				<input type="text" class="form-control" ng-model="dec" ng-keyup="convert(dec, 10, $event)">
-				<!--<input type="text" class="form-control" ng-model="dec" ng-keyup="convert1($event)">-->
 			</div>
 		</div>
 		<div class="row">
